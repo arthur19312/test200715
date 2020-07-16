@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:useBean id="DealBiz" class="biz.impl.DealBizImpl" scope="page"/>
 <jsp:useBean id="userBiz" class="biz.impl.UserBizImpl" scope="page"/>
-<% ArrayList<Deal> dealList = DealBiz.getDeal(); %>
+<% ArrayList<Deal> dealList = DealBiz.getDeal();%>
 <!DOCTYPE html>
 <html>
 <head>
