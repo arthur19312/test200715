@@ -41,10 +41,10 @@ public class PostServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		User user = (User)session.getAttribute("loginUser");//从session中取得登陆用户
 		
-		if(user != null){	//判断用户是否已经登陆
+		if(user != null){
 			Deal deal = new Deal(productName,buyTimeYear,buyTimeMonth,price,newLevel
 					,introduce,contact,contactPhone,user.getUserName());
-			dealBiz.addDeal(deal);	//保存主题帖子
+			dealBiz.addDeal(deal);
 			response.sendRedirect("show.jsp");
 		}
 		else{

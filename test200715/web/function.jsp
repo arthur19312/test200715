@@ -257,14 +257,14 @@
 			color: #00BFA6;
 			text-decoration: underline;
 		}
-		
-		
-		.publish{
-			margin-top: 3rem;
-			line-height: 5rem;
-			color: #00BFA6;
-			font-size: 1.5rem;
-		}
+
+
+        .publish{
+            margin-top: 3rem;
+            color: #00BFA6;
+            font-size: 0.8rem;
+            box-sizing: border-box;
+        }
 		.publish span{
 		}
 				

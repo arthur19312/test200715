@@ -93,6 +93,7 @@
     .main {
     font-size: 1.2em;
     margin: 3rem auto;
+        width: 40%;
     width: max-content;
     letter-spacing: 1px;
     text-align: center;
@@ -155,9 +156,9 @@
 
     .publish{
     margin-top: 3rem;
-    line-height: 5rem;
     color: #00BFA6;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
+        box-sizing: border-box;
     }
     .publish span{
     }

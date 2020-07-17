@@ -29,23 +29,32 @@ public class LoginServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String uName = request.getParameter("userName");
 		String uPass = request.getParameter("userPsw");
-		System.out.println(uName);
-		System.out.println(uPass);
 
-		User user = userBiz.findUser(uName);
-		
-		response.setContentType("text/html");
-		response.setCharacterEncoding("utf-8");
-		PrintWriter out = response.getWriter();
-		
-		if(user != null && user.getUserPsw().equals(uPass)){
-			HttpSession session = request.getSession(true);
-			session.setAttribute("loginUser", user);
-			out.println("µÇÂ½³É¹¦");
-			response.sendRedirect("show.jsp");
+
+		if(uName != null && uPass != null){
+			System.out.println(uName);
+			System.out.println(uPass);
+
+			User user = userBiz.findUser(uName);
+
+			response.setContentType("text/html");
+			response.setCharacterEncoding("utf-8");
+			PrintWriter out = response.getWriter();
+
+			if(user != null && user.getUserPsw().equals(uPass)){
+				HttpSession session = request.getSession(true);
+				session.setAttribute("loginUser", user);
+				out.println("µÇÂ½³É¹¦");
+				response.sendRedirect("show.jsp");
+			}else{
+				out.println("µÇÂ¼Ê§°Ü");
+				response.sendRedirect("login.jsp");
+			}
 		}else{
-			out.println("µÇÂ¼Ê§°Ü");
 			response.sendRedirect("login.jsp");
 		}
+
+
+
 	}
 }

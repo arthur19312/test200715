@@ -5,7 +5,7 @@
          version="4.0">
 
     <welcome-file-list> <welcome-file>login.jsp
-    </welcome-file>   </welcome-file-list>
+    </welcome-file></welcome-file-list>
 
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
@@ -35,12 +35,4 @@
         <url-pattern>/PostServlet</url-pattern>
     </servlet-mapping>
 
-    <filter>
-        <filter-name>authenticationFilter</filter-name>
-        <filter-class>filter.authenticationFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>authenticationFilter</filter-name>
-        <url-pattern>/modify/*</url-pattern>
-    </filter-mapping>
 </web-app>
